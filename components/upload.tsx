@@ -63,5 +63,17 @@ export default function Upload({ setVideoUrl }: UploadProps) {
     setError(null);
   };
 
-  
+  return (
+    <ImageKitProvider
+      publicKey={publicKey}
+      urlEndpoint={urlEndpoint}
+      authenticator={authenticator}
+    >
+      
+
+      
+
+     
+    </ImageKitProvider>
+  );
 }
