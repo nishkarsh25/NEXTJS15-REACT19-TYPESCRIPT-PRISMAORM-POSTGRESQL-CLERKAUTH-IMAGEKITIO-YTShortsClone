@@ -7,9 +7,7 @@ import Upload from "@/components/upload";
 import { Loader2 } from "lucide-react";
 import React, { useActionState, useState } from "react";
 
-type Props = {};
-
-const page = (props: Props) => {
+const page = () => {
   const [formState, action, isPending] = useActionState(uploadShortAction, {
     errors: {},
   });
@@ -57,13 +55,11 @@ const page = (props: Props) => {
 
         <div className="mb-4">
           <Upload setVideoUrl={setVideoUrl} />
-          {
-            formState.errors.formError && (
-              <div className="border border-red-500 bg-red-100">
-                <p className="text-red-600">{formState.errors.formError}</p>
-              </div>
-            )
-          }
+          {formState.errors.formError && (
+            <div className="border border-red-500 bg-red-100">
+              <p className="text-red-600">{formState.errors.formError}</p>
+            </div>
+          )}
         </div>
 
         <Button type="submit" className="w-full">

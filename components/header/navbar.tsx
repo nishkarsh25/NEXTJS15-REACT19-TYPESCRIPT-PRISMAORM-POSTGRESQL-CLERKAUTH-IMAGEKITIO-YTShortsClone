@@ -12,9 +12,7 @@ import {
 } from "@clerk/nextjs";
 import Link from "next/link";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
     <div className="flex items-center justify-between h-14">
       {/* Logo text */}
