@@ -11,4 +11,12 @@ const uploadShortsSchema = z.object({
   video: z.string(),
 });
 
+type UploadShortsState = {
+  errors: {
+    title?: string[];
+    description?: string[];
+    video?: string[];
+    formError?: string[];
+  };
+};
 
