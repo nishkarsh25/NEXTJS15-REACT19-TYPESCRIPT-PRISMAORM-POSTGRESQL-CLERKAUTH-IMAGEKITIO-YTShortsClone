@@ -43,7 +43,21 @@ const page = async (props: Props) => {
     },
   });
 
-  
+  return (
+    <div className="h-screen overflow-y-screen snap-y snap-mandatory">
+      {/* shorts container */}
+      <div className="flex flex-col items-center">
+        {shorts.map((short) => (
+          <div
+            key={short.id}
+            className="snap-start flex justify-center items-center h-screen"
+          >
+            <ShortCard short={short} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 
