@@ -28,7 +28,29 @@ const Navbar = (props: Props) => {
         <Input type="text" placeholder="Search..." />
       </div>
 
-      
+      {/* Account Mangement */}
+      <div className="flex items-center space-x-2">
+        <Link href={"/upload"}>
+          <Button>
+            <Plus />
+            Create
+          </Button>
+        </Link>
+        <header className="flex justify-end items-center p-4 gap-4 h-16">
+          <SignedOut>
+            <SignInButton>
+              <Button>Sign In</Button>
+            </SignInButton>
+            <SignUpButton>
+              <Button>Sign Up</Button>
+            </SignUpButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </header>
+        <ModeToggle />
+      </div>
     </div>
   );
 };
