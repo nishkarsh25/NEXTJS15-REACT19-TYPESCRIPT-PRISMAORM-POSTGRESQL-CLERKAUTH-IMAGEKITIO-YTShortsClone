@@ -37,7 +37,12 @@ export default function Upload({ setVideoUrl }: UploadProps) {
   const [uploadProgress, setUploadProgress] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  
+  const onError = (err: any) => {
+    console.log("Error", err);
+    setError(err.message);
+
+    setUploadProgress(null);
+  };
 
   
 
