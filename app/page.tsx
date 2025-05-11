@@ -60,4 +60,4 @@ const page = async (props: Props) => {
   );
 };
 
-
+export default page;
