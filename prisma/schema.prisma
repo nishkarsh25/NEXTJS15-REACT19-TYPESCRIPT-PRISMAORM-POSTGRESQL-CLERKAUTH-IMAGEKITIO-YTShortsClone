@@ -24,3 +24,14 @@ model User {
   shorts      Shorts[]
 }
 
+model Shorts {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  url         String
+  userId      String
+  createdAt   DateTime @default(now())
+  updateAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+}
