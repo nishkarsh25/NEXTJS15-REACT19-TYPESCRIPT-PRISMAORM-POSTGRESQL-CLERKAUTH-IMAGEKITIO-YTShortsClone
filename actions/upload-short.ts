@@ -24,9 +24,17 @@ export const uploadShortAction = async (
   prevState: UploadShortsState,
   formData: FormData
 ): Promise<UploadShortsState> => {
-  
+  const result = uploadShortsSchema.safeParse({
+    title: formData.get("title") as string,
+    description: formData.get("description") as string,
+    video: formData.get("video") as string,
+  });
 
-  
+  if (!result.success) {
+    return {
+      errors: result.error.flatten().fieldErrors,
+    };
+  }
 
  
 
