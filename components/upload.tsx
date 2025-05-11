@@ -69,7 +69,17 @@ export default function Upload({ setVideoUrl }: UploadProps) {
       urlEndpoint={urlEndpoint}
       authenticator={authenticator}
     >
-      
+      <p>Upload File</p>
+      <IKUpload
+        useUniqueFileName={true}
+        validateFile={(file) => file.size < 20 * 1024 * 1024}
+        folder={"/sample-folder"}
+        onError={onError}
+        onSuccess={onSuccess}
+        onUploadProgress={onUploadProgress}
+        onUploadStart={onUploadStart}
+        className="mt-1 block w-full text-sm tex-gray-900 file:mr-4 file:px-4 file:py-2 file:rounded-md"
+      />
 
       
 
