@@ -46,7 +46,9 @@ export const uploadShortAction = async (
     };
   }
 
-
+  const user = await prisma.user.findUnique({
+    where: { clerkUserId: userId },
+  });
 
  
 
