@@ -51,7 +51,12 @@ export default function Upload({ setVideoUrl }: UploadProps) {
     setError(null);
   };
 
-  
+  const onUploadProgress = (evt: ProgressEvent<XMLHttpRequestEventTarget>) => {
+    if (evt.lengthComputable) {
+      const progress = Math.round(evt.loaded / evt.total / 100);
+      setUploadProgress(progress);
+    }
+  };
 
   
 
