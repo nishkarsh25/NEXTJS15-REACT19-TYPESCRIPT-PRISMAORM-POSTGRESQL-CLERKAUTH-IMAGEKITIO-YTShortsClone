@@ -7,7 +7,7 @@ import Upload from "@/components/upload";
 import { Loader2 } from "lucide-react";
 import React, { useActionState, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [formState, action, isPending] = useActionState(uploadShortAction, {
     errors: {},
   });
@@ -70,4 +70,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
