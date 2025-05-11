@@ -88,7 +88,8 @@ export default function Upload({ setVideoUrl }: UploadProps) {
         </div>
       )}
 
-     
+      {/* Show error message if upload fails  */}
+      {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
     </ImageKitProvider>
   );
 }
