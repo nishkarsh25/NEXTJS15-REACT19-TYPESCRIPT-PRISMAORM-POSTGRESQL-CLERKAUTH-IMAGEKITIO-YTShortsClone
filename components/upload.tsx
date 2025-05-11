@@ -44,7 +44,12 @@ export default function Upload({ setVideoUrl }: UploadProps) {
     setUploadProgress(null);
   };
 
-  
+  const onSuccess = (res: IKUploadResponse) => {
+    console.log("Success", res);
+    setVideoUrl(res.url);
+    setUploadProgress(100);
+    setError(null);
+  };
 
   
 
