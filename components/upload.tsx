@@ -58,7 +58,10 @@ export default function Upload({ setVideoUrl }: UploadProps) {
     }
   };
 
-  
+  const onUploadStart = () => {
+    setUploadProgress(0);
+    setError(null);
+  };
 
   
 }
