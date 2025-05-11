@@ -23,7 +23,11 @@ const Navbar = (props: Props) => {
           YT<span className="text-red-500">Shorts</span>
         </h1>
       </div>
-      
+      {/* Search Input field */}
+      <div className="w-1/2">
+        <Input type="text" placeholder="Search..." />
+      </div>
+
       
     </div>
   );
