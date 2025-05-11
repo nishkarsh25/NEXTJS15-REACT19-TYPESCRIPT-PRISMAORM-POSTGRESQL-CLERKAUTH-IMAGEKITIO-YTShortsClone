@@ -83,7 +83,7 @@ export const uploadShortAction = async (
     }
   }
 
-  
-  
+  revalidatePath("/");
+  redirect("/");
   
 };
