@@ -81,7 +81,12 @@ export default function Upload({ setVideoUrl }: UploadProps) {
         className="mt-1 block w-full text-sm tex-gray-900 file:mr-4 file:px-4 file:py-2 file:rounded-md"
       />
 
-      
+      {/* Show progress bar only when upload is in progress  */}
+      {uploadProgress !== null && (
+        <div className="mt-4">
+          <Progress value={uploadProgress} className="h-2" />
+        </div>
+      )}
 
      
     </ImageKitProvider>
