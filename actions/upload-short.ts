@@ -68,7 +68,19 @@ export const uploadShortAction = async (
       },
     });
   } catch (error) {
-    
+    if (error instanceof Error) {
+      return {
+        errors: {
+          formError: [error.message],
+        },
+      };
+    } else {
+      return {
+        errors: {
+          formError: ["Some internale server error"],
+        },
+      };
+    }
   }
 
   
