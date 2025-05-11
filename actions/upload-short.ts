@@ -50,7 +50,26 @@ export const uploadShortAction = async (
     where: { clerkUserId: userId },
   });
 
- 
+  try {
+    if (!user?.id) {
+      return {
+        errors: {
+          formError: ["User not found"],
+        },
+      };
+    }
+
+    await prisma.shorts.create({
+      data: {
+        title: result.data.title,
+        description: result.data.description,
+        url: result.data.video,
+        userId: user.id,
+      },
+    });
+  } catch (error) {
+    
+  }
 
   
   
