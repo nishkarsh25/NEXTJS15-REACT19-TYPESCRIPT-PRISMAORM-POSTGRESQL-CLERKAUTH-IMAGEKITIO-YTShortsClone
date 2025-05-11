@@ -20,3 +20,21 @@ type UploadShortsState = {
   };
 };
 
+export const uploadShortAction = async (
+  prevState: UploadShortsState,
+  formData: FormData
+): Promise<UploadShortsState> => {
+  
+
+  
+
+ 
+
+
+
+ 
+
+  
+  
+  
+};
