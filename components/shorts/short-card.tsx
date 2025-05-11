@@ -9,7 +9,18 @@ import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 const urlEndPoint = process.env.NEXT_PUBLIC_URL_ENDPOINT as string;
 
-
+type ShortCardProp = {
+  short: Prisma.ShortsGetPayload<{
+    include: {
+      user: {
+        select: {
+          name: true;
+          emailAddress: true;
+        };
+      };
+    };
+  }>;
+};
 
 
 
