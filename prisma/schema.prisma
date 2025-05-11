@@ -14,5 +14,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
+model User {
+  id          String   @id @default(cuid())
+  clerkUserId String   @unique
+  name        String
+  emailAddress       String
+  createdAt   DateTime @default(now())
+  updateAt    DateTime @updatedAt
+  shorts      Shorts[]
+}
 
