@@ -33,3 +33,17 @@ type UploadProps = {
   setVideoUrl: (url: string) => void;
 };
 
+export default function Upload({ setVideoUrl }: UploadProps) {
+  const [uploadProgress, setUploadProgress] = useState<number | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  
+
+  
+
+  
+
+  
+
+  
+}
