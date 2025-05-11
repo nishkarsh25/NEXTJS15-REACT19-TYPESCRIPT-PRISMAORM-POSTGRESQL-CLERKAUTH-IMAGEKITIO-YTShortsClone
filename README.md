@@ -46,7 +46,7 @@ This project is a full-stack YouTube Shorts clone designed to provide a seamless
 
 ## Live Demo
 
-- You can try out the live demo of the blogging app [here](https://nextjs-15-react-19-typescript-prismaorm-postgresql-uv2fpcb5e.vercel.app/).
+- You can try out the live demo of the blogging app [here](https://nextjs-15-react-19-typescript-prismaorm-postgresql-obgj2oqgl.vercel.app/).
 
 ## 📁 Folder Structure
 
