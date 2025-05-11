@@ -27,7 +27,21 @@ const page = async (props: Props) => {
     });
   }
 
-  
+  const shorts = await prisma.shorts.findMany({
+    where: { userId: loggedInUser?.id },
+    include: {
+      user: {
+        select: {
+          name: true,
+          emailAddress: true,
+        },
+      },
+    },
+
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
   
 };
