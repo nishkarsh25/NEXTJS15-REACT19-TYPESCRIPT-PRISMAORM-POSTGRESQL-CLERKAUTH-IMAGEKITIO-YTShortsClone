@@ -35,7 +35,26 @@ const ShortCard: React.FC<ShortCardProp> = ({ short }) => {
         />
       </ImageKitProvider>
 
-      
+      {/* Channel Information*/}
+      <CardFooter className="absolute bottom-20 -left-2 text-white">
+        <div>
+          <div className="flex items-center space-x-2 ">
+            <Avatar>
+              <AvatarImage src="" alt="channel owner photo" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+
+            <div className="flex flex-col">
+              <h3 className="font-semibold">{short.title}</h3>
+              <span className="text-sm">{short.user.name}</span>
+            </div>
+          </div>
+
+          <div className="text-sm mt-2">
+            <p>{short.description}</p>
+          </div>
+        </div>
+      </CardFooter>
     </Card>
   );
 };
