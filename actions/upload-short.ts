@@ -36,7 +36,15 @@ export const uploadShortAction = async (
     };
   }
 
- 
+  //clerk authentication
+  const { userId } = await auth();
+  if (!userId) {
+    return {
+      errors: {
+        formError: ["Please login first to create a short"],
+      },
+    };
+  }
 
 
 
