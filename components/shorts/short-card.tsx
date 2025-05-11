@@ -22,6 +22,22 @@ type ShortCardProp = {
   }>;
 };
 
+const ShortCard: React.FC<ShortCardProp> = ({ short }) => {
+  return (
+    <Card className="p-0 w-[360px] h-[640px]  flex flex-col items-center justify-center overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300  relative ">
+      <ImageKitProvider urlEndpoint={urlEndPoint}>
+        <IKVideo
+          path={short.url.replace(urlEndPoint, "")}
+          transformation={[{ height: "640", width: "360", format: "mp4" }]}
+          controls
+          autoPlay={false}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </ImageKitProvider>
 
+      
+    </Card>
+  );
+};
 
 
