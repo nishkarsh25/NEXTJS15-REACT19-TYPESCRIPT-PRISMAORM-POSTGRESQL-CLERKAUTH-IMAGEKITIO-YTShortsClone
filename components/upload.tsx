@@ -29,5 +29,7 @@ const authenticator = async () => {
   }
 };
 
-
+type UploadProps = {
+  setVideoUrl: (url: string) => void;
+};
 
