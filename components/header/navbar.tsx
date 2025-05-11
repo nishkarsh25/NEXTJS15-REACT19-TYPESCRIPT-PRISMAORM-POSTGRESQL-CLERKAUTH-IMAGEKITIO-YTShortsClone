@@ -15,7 +15,13 @@ import Link from "next/link";
 type Props = {};
 
 const Navbar = (props: Props) => {
-  
+  return (
+    <div className="flex items-center justify-between h-14">
+      
+      
+      
+    </div>
+  );
 };
 
 
