@@ -13,7 +13,19 @@ const page = async (props: Props) => {
     return null;
   }
 
-  
+  const loggedInUser = await prisma.user.findUnique({
+    where: { clerkUserId: user.id },
+  });
+
+  if (!loggedInUser) {
+    await prisma.user.create({
+      data: {
+        name: user.fullName || "Name",
+        emailAddress: user.emailAddresses[0].emailAddress,
+        clerkUserId: user.id,
+      },
+    });
+  }
 
   
 
