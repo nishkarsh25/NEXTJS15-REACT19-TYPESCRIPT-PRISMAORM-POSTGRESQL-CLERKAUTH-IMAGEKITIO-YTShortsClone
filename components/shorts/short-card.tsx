@@ -59,4 +59,4 @@ const ShortCard: React.FC<ShortCardProp> = ({ short }) => {
   );
 };
 
-
+export default ShortCard;
