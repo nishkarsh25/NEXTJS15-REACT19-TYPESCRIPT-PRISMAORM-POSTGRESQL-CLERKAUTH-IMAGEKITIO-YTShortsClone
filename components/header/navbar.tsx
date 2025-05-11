@@ -12,8 +12,10 @@ import {
 } from "@clerk/nextjs";
 import Link from "next/link";
 
+type Props = {};
 
-
-
+const Navbar = (props: Props) => {
+  
+};
 
 
