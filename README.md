@@ -1,4 +1,4 @@
-# NEXTJS15-REACT19-TYPESCRIPT-PRISMAORM-POSTGRESQL-CLERKAUTH-BloggingApplication
+# NEXTJS15-REACT19-TYPESCRIPT-PRISMAORM-POSTGRESQL-CLERKAUTH-IMAGEKITIO-YTShortsClone
 
 Welcome to the NEXTJS project! This comprehensive guide will walk you through every aspect of this project, including its structure, setup instructions, usage, API endpoints, backend, frontend, contributing guidelines, license information, and how to get in touch for support or inquiries.
 
